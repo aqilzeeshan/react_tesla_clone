@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+main{
+  width:100vw;
+  height:500vh;
+  margin:0;
+  background-color:transparent;
+  font-family: 'Montserrat', sans-serif;
+  color:#000;
+  font-weight:500;
+  position:absolute;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  width:100vw;
+  height:60px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  list-style:none;
+  margin:0 10px;
+  padding:5px;
+  font-size:11px;
+  position:fixed;
+  z-index:2000;
 }
+.logo{
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+  width:100px;
+  height:80px;
+}
+ .models {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  gap:0.5em;
+  margin:0 30px;
+  list-style:none;
+  cursor:pointer;
+  border:2px solid transparent;
+  
+}
+.models li a{
+  text-decoration:none;
+  padding:5px 5px;
+  border:5px solid transparent ;
+}
+.models li a:hover{
+  background:#eee;
+  border-radius:5px;
+}
+ .menu {
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-end;
+  align-items:center;
+  gap:1em;
+  margin:0 30px;
+  list-style:none;
+  border:2px solid transparent;
+  cursor:pointer;
+}
+.menu li a{
+  text-decoration:none;
+  padding:5px 5px;
+  border:2px solid transparent;
+}
+.menu li a:hover{
+  background:#eee;
+  border-radius:5px;
+}
+sub{
+  color:#000;
+  font-weight:500;
+  font-size:12px;
+  z-index:2;
+}
+.text{
+  position:absolute;
+  top:10%;
+  width:100%;
+  text-align:center;
+  font-size:16px;
+  font-weight:400;
+  z-index:2;
+}
+h1{
+  margin-bottom:2px;
+  z-index:2;
+}
+a{
+  color:black;
+  margin:2px;
+  z-index:2;
+}
+.btn{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:200px;
+  position:relative;
+  top:80%;
+  z-index:2;
+}
+.btn .dark{
+  background:#000;
+  color:#fff;
+  border:2px solid#000;
+  border-radius:5px;
+  opacity:0.8;
+  z-index:2;
+}
+.btn .light{
+  background:#eee;
+  color:#333;
+  border:2px solid#eee;
+  border-radius:5px;
+  opacity:0.8;
+  z-index:2;
+}
+button{
+  width:250px;
+  height:40px;
+  padding:10px;
+  margin:20px;
+  z-index:2;
+}
+.end{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  bottom:4%;
+  width:100%;
+  height:70px;
+  z-index:2;
+  
+}
+.end a{
+  color:#eee;
+  z-index:2;
+}
+footer{
+  position:relative;
+  top: 78%;
+  color:black;
+  font-size:10px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+footer a{
+  text-decoration:none;
+}
+.link{
+  border-radius:5px;
+  margin:10px;
+  padding:5px;
+  text-decoration:none;
+  border:2px solid transparent;
+  cursor:pointer;
+}
+.link:hover{
+  border-radius:5px;
+  border:2px solid #333;
+}
+@media(max-width:870px){
+  .nav {
+    margin:5px 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:11px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .menu{
+    margin:5px 0;
   }
-  to {
-    transform: rotate(360deg);
+  .btn{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:200px;
+    position:relative;
+    top:70%;
+    z-index:2;
   }
+
 }
