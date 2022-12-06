@@ -62,55 +62,7 @@ function App() {
   return (
     <main>  
       <Models data={carData}/>
-      <div style={getImageStyle(modely)}>
-        <Nav logo={logo} logoStyle={logoStyle} />
-        <div class="text">
-          <span class="clear">
-            <h1>Model Y</h1>
-            <sub>2% Company Car Tax. <a href="">Learn More</a></sub>
-          </span>
-        </div>
-        <div class="btn">
-          <button class="dark">Custom Order</button>
-          <button class="light">Test Drive</button>
-        </div>
-      </div>
 
-      <div style={getImageStyle(model3)}>
-        <div class="text">
-          <span class="clear">
-            <h1>Model 3</h1>
-            <sub>2% Company Car Tax. <a href="">Learn More</a></sub>
-          </span>
-        </div>
-        <div class="btn">
-          <button class="dark">Custom Order</button>
-          <button class="light">Test Drive</button>
-        </div>
-      </div>
-
-      <div style={getImageStyle(models)}>
-        <div class="text">
-          <span class="clear">
-            <h1>Model S</h1>
-          </span>
-        </div>
-        <div class="btn">
-          <button class="dark">Custom Order</button>
-          <button class="light">Test Drive</button>
-        </div>
-      </div>
-      <div style={getImageStyle(modelx)}>
-        <div class="text">
-          <span class="clear">
-            <h1>Model X</h1>
-          </span>
-        </div>
-        <div class="btn">
-          <button class="dark">Custom Order</button>
-          <button class="light">Test Drive</button>
-        </div>
-      </div>
       
       <div style={getImageStyle(solar)}>
         <div class="text">

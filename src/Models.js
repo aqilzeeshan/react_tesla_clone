@@ -33,18 +33,20 @@ const Models = (props)=>{
 
         carData.map((obj)=>{
 
-            <div style={getImageStyle(obj.image)}>
-                <div class="text">
-                <span class="clear">
-                    <h1>{obj.heading}</h1>
-                    <sub>{obj.subheading}<a href="">Learn More</a></sub>
-                </span>
+            return (
+                <div style={getImageStyle(obj.image)}>
+                    <div class="text">
+                    <span class="clear">
+                        <h1>{obj.heading}</h1>
+                        <sub>{obj.subheading}<a href="">Learn More</a></sub>
+                    </span>
+                    </div>
+                    <div class="btn">
+                    <button class="dark">Custom Order</button>
+                    <button class="light">Test Drive</button>
+                    </div>
                 </div>
-                <div class="btn">
-                <button class="dark">Custom Order</button>
-                <button class="light">Test Drive</button>
-                </div>
-            </div>
+            )
         })  
     )
 }
