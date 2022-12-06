@@ -1,17 +1,20 @@
+//Import css
 import './App.css';
+//Import images
 import model3 from './images/model3.png';
 import models from './images/models.jpeg';
 import modelx from './images/modelx.jpeg';
 import modely from './images/modely.png';
-import solar from './images/solar.png';
-import modelwall from './images/modelwall.png';
 import logo from './images/logo.png';
+//Import components
 import Nav from './Nav'
 import Models from './Models'
+import Footer from './Footer'
+import Accessories from './Accessories';
 
+//App is functional component that contains all other components
 function App() {
-
-
+  //function to return css inserting image provided as parameter
   const getImageStyle = (image)=>{
     const imageStyle = {
       backgroundImage:`url(${image})`,
@@ -30,12 +33,14 @@ function App() {
     }
     return imageStyle
   }
+  //Syle for logo
   const logoStyle ={
       width:'100px',
       height:'10px',
       margin:'20px'
   }
-
+  //This data is passed to Model component as prop
+  //It consists of heading, sub-heading and image to be shown
   const carData = [
     {
       "heading":"Model Y",
@@ -61,40 +66,12 @@ function App() {
 
   return (
     <main>  
+      {/*Navigation functional component to show the menu on the top of the page*/}
+      <Nav logo={logo} logoStyle={logoStyle} />
+      {/*Models functional component to show different cars, their names and brief info*/}
       <Models data={carData}/>
-
-      
-      <div style={getImageStyle(solar)}>
-        <div class="text">
-          <span class="clear">
-            <h1>Solar and Powerwall</h1>
-            <sub>Power Everything</sub>
-          </span>
-        </div>
-        <div class="btn">
-          <button class="dark">Learn more</button>
-        </div>
-      </div>
-
-      <div style={getImageStyle(modelwall)}>
-        <div class="text">
-          <span class="clear">
-            <h1>Accessories</h1>
-          </span>
-        </div>
-        <div class="btn">
-          <button class="dark">Shop Now</button>
-        </div>
-        <footer>
-          <div>Tesla 	&#169; 2022  </div>
-            <div class="link"><a href="#">Privacy &#38; Legal</a> </div>
-            <div class="link"><a href="#">Contact</a></div>
-            <div class="link"><a href="#">Careers</a></div>
-            <div class="link"><a href="#">News</a></div>
-            <div class="link"><a href="#">Location</a></div>
-        </footer>
-      </div>
-      
+      {/*Accessories functional component to show accessories*/}
+      <Accessories/>
     </main>
   );
 }

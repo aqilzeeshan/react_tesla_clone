@@ -1,9 +1,6 @@
+//Import React
 import React from 'react'
-import model3 from './images/model3.png';
-import models from './images/models.jpeg';
-import modelx from './images/modelx.jpeg';
-import modely from './images/modely.png';
-
+//function to return css inserting image provided as parameter
 const getImageStyle = (image)=>{
     const imageStyle = {
         backgroundImage:`url(${image})`,
@@ -22,17 +19,12 @@ const getImageStyle = (image)=>{
     }
     return imageStyle
 }
-
+//Models functional component takes json array of objects where each object represents each product/car
+//It loops through array showing each product/car (its heading, subheading and image)
 const Models = (props)=>{
     const carData = props.data
     return (
-
-            //console.log("-->"+obj.heading)
-            //console.log("==>"+obj.subheading)
-            //console.log(">>>"+obj.image)
-
         carData.map((obj)=>{
-
             return (
                 <div style={getImageStyle(obj.image)}>
                     <div class="text">
@@ -50,5 +42,5 @@ const Models = (props)=>{
         })  
     )
 }
-
+//export Models so it can be used by other components
 export default Models
